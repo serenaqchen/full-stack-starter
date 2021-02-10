@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import AboutMe from './AboutMe';
 import Api from './Api';
 import {useAuthContext} from './AuthContext';
+import './AboutMe.scss';
 
 function Home() {
   const {user} = useAuthContext();

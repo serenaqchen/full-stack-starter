@@ -7,12 +7,14 @@ import {
 import './App.scss';
 
 import {AuthContextProvider, AuthProtectedRoute} from './AuthContext';
+import Components from './Components';
 import Header from './Header';
 import Home from './Home';
 import Login from './Login';
 import Passwords from './Passwords';
 import Register from './Register';
 import SectionItems from './SectionItems';
+import Sections from './Sections/Sections';
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path = "/components">
+            <Components />
           </Route>
           <Route path="/login">
             <Login />
@@ -34,6 +39,9 @@ function App() {
               <Register />
             </Route>
           )}
+          <Route path="/sections">
+            <Sections />
+          </Route>
           <AuthProtectedRoute path="/sectionItems">
             <SectionItems />
           </AuthProtectedRoute>
