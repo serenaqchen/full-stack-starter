@@ -15,6 +15,7 @@ import Passwords from './Passwords';
 import Register from './Register';
 import SectionItems from './SectionItems';
 import Sections from './Sections/Sections';
+import Projects from './Projects';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path = "/projects">
+            <Projects />
           </Route>
           <Route path = "/components">
             <Components />
