@@ -14,7 +14,7 @@ const HttpStatus = require('http-status-codes');
 const helpers = require('./routes/helpers');
 const routes = require('./routes');
 
-const app = express();
+const app = express(); //call express library like a function 
 
 /// router logging output
 if (process.env.NODE_ENV !== 'test') {
@@ -58,7 +58,7 @@ app.use(function(req, res, next) {
 });
 
 /// load in all the configured routes in /routes/index.js
-app.use(routes);
+app.use(routes); //use routes in our route directory 
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
