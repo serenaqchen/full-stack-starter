@@ -34,7 +34,7 @@ function Home() {
         <div className="col-md-4">
           <AboutMe />
           <ul>
-            {skills.map(s => <li>{s.name}</li>)}
+            {skills.map(s => <li key={s.id}>{s.name}</li>)}
           </ul>
         </div>
         <div className="col-md-7 offset-md-1">
